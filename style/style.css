@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    width: 100vm;
+	margin: 0;
+	background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+.header {
+	width: 84%;
+	margin: 0 auto;
+}
+
+header {
+  background: #3e454f;
+  width: 100%;
+  position: fixed;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 40px;
+    padding-top: 23px;
+
+    position: relative;
+}
+
+nav a {
+    color: #cccccc;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #cccccc;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+
+.main_box{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: rgb(204, 204, 204);
+    background-color: rgb(34, 44, 55);
+}
+h1,h2,h3,h4{
+    margin: 0%;
+}
+h1{
+    font-size: 70px;
+}
+h3{
+    font-size: 25px;
+}
+
+.Images_container{
+    width: 100%;
+    height: 600px;
+    display: flex;
+}
+.Images_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.3;
+    border: 10px solid transparent;
+    background-clip: padding-box;
+    border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    border-image-slice: 1;
+}
+
+.Images_container  img:hover{
+    opacity: 1;
+    transition:  all ease-in-out 250ms;;
+    box-shadow: 100 10 10px rgba(0, 0, 0, 1);
+}
+
+.slider {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: slide 12s infinite;
+    opacity: 0;
+  }
+  
+  .slide:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .slide:nth-child(2) {
+    animation-delay: 6s;
+  }
+  
+  .slide:nth-child(3) {
+    animation-delay: 12s;
+  }
+
+ .wrapper {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e282f;
+}
+
+.TitleUnity1{
+    background-color: #1e282f;
+    display: flex;
+    justify-content: center;
+    margin-top: 170px;
+    font-size: 50px;
+    color: #cccccc;
+}
+  .container {
+    height: 600px;
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 100px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    object-fit: fill;
+    overflow: hidden;
+    height: 80px;
+    width: 600px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #df960f;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 800px;
+    
+    background-size: contain;
+    background-position: center;
+    
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    background-image: url("/assets/MechaPawng/mechapong2.png");
+
+}
+.card[for="c2"] {
+    background-image: url("/assets/MechaPawng/mechapong1.png");
+}
+.card[for="c3"] {
+    background-image: url('/assets/MechaPawng/mechapongdisk.png');
+}
+.title_container{
+    background-color: #3e454f;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    color: #cccccc;
+    font-size: 2rem;
+    border-radius: .75rem;
+    background-size: contain;
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+
+}
+.title1_p{
+    width: 50%;
+    height: 50%;
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    justify-content: left;
+}
+.tilte1_list{
+    margin-left: 200px;
+    justify-content: right; 
+}
+ul{
+    margin-top: 30px;
+    font-size: 2rem;
+    list-style-type: circle;
+
+}
+.videogameplaycontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+#videogameplay{
+    width: 50%;
+    
+}
+
+.card[for="c4"] {
+    background-image: url("/assets/NucleNoir/02_Progetto Twister_Team03_Nuclenoir_Capsula principale.png");
+}
+.card[for="c5"] {
+    background-image: url("/assets/NucleNoir/02_Progetto Twister_Team03_Nuclenoir_Icona e Logo.png");
+}
+.card[for="c6"] {
+    background-image: url('/assets/NucleNoir/02_Progettpo Twister_team03_Nuclenoir_Sfondo pagina.png');
+}
+.card[for="c7"] {
+    background-image: url("/assets/Gold'n Goal/GnG_Screenshot_1.png");
+}
+.card[for="c8"] {
+    background-image: url("/assets/Gold'n Goal/GnG_Screenshot_2.png");
+}
+.card[for="c9"] {
+    background-image: url("/assets/Gold'n Goal/GnG_Screenshot_5 copy.png");
+}
+.card[for="c10"] {
+    background-image: url("/assets/My last neuron/Copertina.jpg");
+}
+.card[for="c11"] {
+    background-image: url("/assets/My last neuron/Screenshot 2024-01-28 150601.jpg");
+}
+.card[for="c12"] {
+    background-image: url("/assets/My last neuron/Immagine WhatsApp 2024-01-28 ore 17.23.00_e1a0a098.jpg");
+}
